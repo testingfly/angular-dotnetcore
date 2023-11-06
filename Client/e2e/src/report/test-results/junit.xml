@@ -1,0 +1,162 @@
+<testsuites id="" name="" tests="3" failures="3" skipped="0" errors="0" time="101.185834">
+<testsuite name="src/tests/homepage.test.ts" timestamp="2023-11-06T04:08:16.064Z" hostname="Profile-Chrome" tests="3" failures="3" skipped="0" time="4.026" errors="0">
+<testcase name="Home Page › @smoke should show correct Page title" classname="src/tests/homepage.test.ts" time="1.5">
+<failure message="homepage.test.ts:9:9 @smoke should show correct Page title" type="FAILURE">
+<![CDATA[  [Profile-Chrome] › src/tests/homepage.test.ts:9:9 › Home Page › @smoke should show correct Page title 
+
+    Test timeout of 1500ms exceeded.
+
+    Error: page.waitForLoadState: Navigation failed because page was closed!
+    =========================== logs ===========================
+      "commit" event fired
+      "domcontentloaded" event fired
+      "load" event fired
+    ============================================================
+
+       at src/helpers/WebActions.ts:51
+
+      49 |         switch (event.toLowerCase()) {
+      50 |             case `networkidle`:
+    > 51 |                 await this.page.waitForLoadState('networkidle');
+         |                                 ^
+      52 |                 break;
+      53 |             case `load`:
+      54 |                 await this.page.waitForLoadState('load');
+
+        at WebActions.waitForLoadState (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/helpers/WebActions.ts:51:33)
+        at WebActions.verifyPageTitle (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/helpers/WebActions.ts:182:20)
+        at HomePO.verifyPageTitle (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/pageobjects/pages/homepage.po.ts:26:26)
+        at /Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/tests/homepage.test.ts:10:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/video.webm]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-Page-title-Profile-Chrome/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Home Page › @smoke should show correct page Welcome Message" classname="src/tests/homepage.test.ts" time="1.501">
+<failure message="homepage.test.ts:13:9 @smoke should show correct page Welcome Message" type="FAILURE">
+<![CDATA[  [Profile-Chrome] › src/tests/homepage.test.ts:13:9 › Home Page › @smoke should show correct page Welcome Message 
+
+    Test timeout of 1500ms exceeded.
+
+    Error: page.waitForSelector: Page closed
+    =========================== logs ===========================
+    waiting for locator('data-testid=welcome-message') to be visible
+    ============================================================
+
+       at src/helpers/WebActions.ts:23
+
+      21 |             await this.page.waitForTimeout(timeout);
+      22 |         }
+    > 23 |         await this.page.waitForSelector(locator);
+         |                         ^
+      24 |     }
+      25 |
+      26 |     async waitForPageNavigation(event?: string, path?: string): Promise<void> {
+
+        at WebActions.waitForElementAttached (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/helpers/WebActions.ts:23:25)
+        at WebActions.verifyElementText (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/helpers/WebActions.ts:160:20)
+        at HomePO.verifyWelcomeMessage (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/pageobjects/pages/homepage.po.ts:31:26)
+        at /Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/tests/homepage.test.ts:14:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/video.webm]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-page-Welcome-Message-Profile-Chrome/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Home Page › @smoke should show correct App title" classname="src/tests/homepage.test.ts" time="1.025">
+<failure message="homepage.test.ts:17:9 @smoke should show correct App title" type="FAILURE">
+<![CDATA[  [Profile-Chrome] › src/tests/homepage.test.ts:17:9 › Home Page › @smoke should show correct App title 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Angular/TypeScript Hello World Starter"
+    Received: "Customer Manager"
+
+       at src/helpers/WebActions.ts:162
+
+      160 |         await this.waitForElementAttached(locator);
+      161 |         const textValue = await this.page.textContent(locator);
+    > 162 |         expect(textValue?.trim()).toBe(text);
+          |                                   ^
+      163 |     }
+      164 |
+      165 |     async verifyElementContainsText(locator: string, text: string): Promise<void> {
+
+        at WebActions.verifyElementText (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/helpers/WebActions.ts:162:35)
+        at HomePO.verifyAppTitleText (/Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/pageobjects/pages/homepage.po.ts:36:9)
+        at /Users/ross.meitei/Documents/projects/angular-dotnetcore/Client/e2e/src/tests/homepage.test.ts:18:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/src/report/data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/video.webm]]
+
+[[ATTACHMENT|../data/src-tests-homepage-Home-Page-smoke-should-show-correct-App-title-Profile-Chrome/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
